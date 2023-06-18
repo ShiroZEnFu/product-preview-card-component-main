@@ -1,0 +1,198 @@
+@import url(https://fonts.google.com/specimen/Montserrat);
+@import url(https://fonts.google.com/specimen/Fraunces);
+
+html, body {
+    width: 100%;
+    height: 150vh;
+    font-family: Montserrat, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+
+    display: flex;
+}
+
+.logo {
+    font-family: inherit;
+    letter-spacing: 7px;
+    color: hsl(228, 12%, 48%);
+}
+
+.card {
+
+    width: 800px;
+    height: 600px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    &__image {
+
+        background-image: url(/images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 600px;
+        background-size: contain;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    &__text {
+        font-family: inherit;
+        width: 50%;
+        height: 600px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px;
+        padding-right: 50px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+    }
+    &__title {
+        font-family: Fraunces;
+        line-height: 50px;
+        font-size: 26px;
+
+    }
+    &__subtitle {
+        color: hsl(228, 12%, 48%);
+        font-size: 25px;
+        font-weight: lighter;
+        font-family: Fraunces;
+
+        line-height: 30px;
+        text-align: left;
+    }
+    &__cost {
+        font-family: Fraunces;
+        
+        font-size: 40px;
+        position: relative;
+        text-align: left;
+        
+        & p {
+            color: hsl(158, 36%, 37%);
+            font-weight: 800;
+        }
+
+        & .span {
+            color: hsl(228, 12%, 48%);
+            position: absolute;
+            right: 120px;
+            top: 10px;
+            font-size: 20px;
+            text-decoration: line-through;
+        }
+    }
+
+    &__button {
+        width:  100%;
+        height: 50px;
+    
+        & .btn {
+            background-color: hsl(158, 36%, 37%);
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%; 
+            color: white;
+            font-family: Fraunces;
+            font-size: 24px;
+            cursor: pointer;
+            
+
+            
+        } 
+        & .buy {
+            padding-right: 10px;
+        }
+        & .btn:hover {
+            background-color: hsl(158, 37%, 29%);
+        }
+    }
+    
+
+}
+
+
+
+@media (max-width: 375px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 350px;
+        height: 400px;
+
+        
+
+
+
+        &__image {
+            background-image: url(/images/image-product-mobile.jpg);
+            width: 350px;
+            height: 200px;
+            background-size: cover;
+            border-radius: 20px 20px 0 0 ;
+        }
+        &__text {
+            width: 350px;
+            height: 50%;
+            border-radius: 0 0 20px 20px;
+            padding: 25px;
+            padding-right: 25px;
+        }
+        &__title {
+            padding-top: 10px;
+            font-family: Fraunces;
+            line-height: 30px;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        &__subtitle{ 
+            padding-top: 10px;
+            font-family: Fraunces;
+            line-height: 30px;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+        &__cost{
+            & p {
+                font-size: 35px;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                color: hsl(158, 36%, 37%);
+                font-weight: 800;
+            }
+    
+            & .span {
+                color: hsl(228, 12%, 48%);
+                position: absolute;
+                right: 100px;
+                top: 20px;
+                font-size: 16px;
+                text-decoration: line-through;
+            }
+
+        }
+    }    
+
+}
+
+
+
